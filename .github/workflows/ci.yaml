@@ -17,6 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install goclone formula
-      run: brew install ./goclone.rb
-    - name: test goclone formula
-      run: brew test ./goclone.rb
+      run: brew install shurco/tap/goclone
