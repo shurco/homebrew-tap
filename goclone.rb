@@ -10,7 +10,7 @@ class Goclone < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_darwin-amd64.tar.gz"
-      sha256 "434fad889f87983074d2c0854b36c80f7b1c52145e603f5d74be6c1a2fd00fa6"
+      sha256 "d6c7efdc2802e95c6c57ec1d5c8ee7a7e5245bf8b652e54a3416ba6db4449345"
 
       def install
         bin.install "goclone"
@@ -18,7 +18,7 @@ class Goclone < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_darwin-arm64.tar.gz"
-      sha256 "5ce1dbbbbd361c0fab5563e226dfda263ae4607fbe8e0eaaa831f6d859c95fbc"
+      sha256 "358326c59161325093819dcde67976ffef42e73faec2ebeaa29aa018f792142f"
 
       def install
         bin.install "goclone"
@@ -29,7 +29,7 @@ class Goclone < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_linux-arm64.tar.gz"
-      sha256 "9b14435be8878992d12b63aa33a6b4c4a81a865bc7305a1407a9ccbd285839f9"
+      sha256 "e348796a4c499ee23177660a44a7574eeefc61fd2db275c22d70829bc3a25aa4"
 
       def install
         bin.install "goclone"
@@ -37,7 +37,7 @@ class Goclone < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_linux-amd64.tar.gz"
-      sha256 "6fa73a489295d1f0dba1ab748c399cce34502a7aa0b1816c815dcac12a872193"
+      sha256 "7f2d457bf5b5daee178efde463777e2a435caf85d2607a9c14d523e68f0b0bb0"
 
       def install
         bin.install "goclone"
