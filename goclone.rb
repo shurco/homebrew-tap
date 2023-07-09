@@ -5,20 +5,20 @@
 class Goclone < Formula
   desc "Website Cloner - Utilizes powerful Go routines to clone websites to your computer within seconds."
   homepage "https://github.com/shurco/goclone"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_darwin-amd64.tar.gz"
-      sha256 "d6c7efdc2802e95c6c57ec1d5c8ee7a7e5245bf8b652e54a3416ba6db4449345"
+    if Hardware::CPU.arm?
+      url "https://github.com/shurco/goclone/releases/download/v1.0.1/goclone_1.0.1_darwin-arm64.tar.gz"
+      sha256 "b356d36e8719869fd00c6d3f823c9c907287c84d5006515ba354288fe1993e4c"
 
       def install
         bin.install "goclone"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_darwin-arm64.tar.gz"
-      sha256 "358326c59161325093819dcde67976ffef42e73faec2ebeaa29aa018f792142f"
+    if Hardware::CPU.intel?
+      url "https://github.com/shurco/goclone/releases/download/v1.0.1/goclone_1.0.1_darwin-amd64.tar.gz"
+      sha256 "113048bfb6b9560634542c64a0116ed1eeef928f8a78c00dd860e7e63ec9aae4"
 
       def install
         bin.install "goclone"
@@ -28,16 +28,16 @@ class Goclone < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_linux-arm64.tar.gz"
-      sha256 "e348796a4c499ee23177660a44a7574eeefc61fd2db275c22d70829bc3a25aa4"
+      url "https://github.com/shurco/goclone/releases/download/v1.0.1/goclone_1.0.1_linux-arm64.tar.gz"
+      sha256 "99443e314c75ba007fb7d61b1185e2d1096e8e9d089f7d443e26278ed4730eef"
 
       def install
         bin.install "goclone"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shurco/goclone/releases/download/v1.0.0/goclone_1.0.0_linux-amd64.tar.gz"
-      sha256 "7f2d457bf5b5daee178efde463777e2a435caf85d2607a9c14d523e68f0b0bb0"
+      url "https://github.com/shurco/goclone/releases/download/v1.0.1/goclone_1.0.1_linux-amd64.tar.gz"
+      sha256 "678dd7ca54cdb924e08a4f8e0ea7d98e2eaa678b6db432dcf22f766c7748cb25"
 
       def install
         bin.install "goclone"
