@@ -9,17 +9,17 @@ class Litecart < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_darwin-arm64.tar.gz"
-      sha256 "36d89149bcbf317bc916ec38e2ad61fb587a6e29785ff72a44f017a7cca9abaf"
+    if Hardware::CPU.intel?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_darwin-amd64.tar.gz"
+      sha256 "a6842ce96491db8022c7b2ac00255c7e2967e2f2a767dba844c775b3f5dc9888"
 
       def install
         bin.install "litecart"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_darwin-amd64.tar.gz"
-      sha256 "fc8e4793cf818b1cbe77ac7412fd2a3446cda16be3278fa1b2e648aa3e2bbdcc"
+    if Hardware::CPU.arm?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_darwin-arm64.tar.gz"
+      sha256 "952ed831a628e4c66e78c1f89d181a9babfb18dec4a768ddb594987db4a45851"
 
       def install
         bin.install "litecart"
@@ -28,17 +28,17 @@ class Litecart < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_linux-arm64.tar.gz"
-      sha256 "48eb544f09605fa4e28caa50d09188d590a2e8074276e0478e8cc113ba827704"
+    if Hardware::CPU.intel?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_linux-amd64.tar.gz"
+      sha256 "3619e7e1231f791a3d6cac8f837dd022480f169cba271bb89299335949cb07c7"
 
       def install
         bin.install "litecart"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_linux-amd64.tar.gz"
-      sha256 "6307f4576ae5adf282b1d974139cef52759f5846bced6fcbd94cc850d3947885"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.1/litecart_0.1.1_linux-arm64.tar.gz"
+      sha256 "abdd2df64942982e4314e19ffa6e712d744ca2e1a7b74ec32d0813543c9fd4b3"
 
       def install
         bin.install "litecart"
