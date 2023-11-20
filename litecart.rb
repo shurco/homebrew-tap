@@ -5,21 +5,21 @@
 class Litecart < Formula
   desc "🛒 litecart - shopping-cart in 1 file"
   homepage "https://github.com/shurco/litecart"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.4/litecart_0.1.4_darwin-amd64.tar.gz"
-      sha256 "f5b1095959117184c9e3bcd9b8a8eb4d6ca29267f45e9576eaf076860f874eeb"
+    if Hardware::CPU.arm?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.5/litecart_0.1.5_darwin-arm64.tar.gz"
+      sha256 "379991668fc93abde2c8a2fe00d8ee8cb3af57a5c1663d04e93fdddc1b840d35"
 
       def install
         bin.install "litecart"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.4/litecart_0.1.4_darwin-arm64.tar.gz"
-      sha256 "14242bec173a8db4f0d39ae639553cf72995086253aa26ea5cc1535b48207fef"
+    if Hardware::CPU.intel?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.5/litecart_0.1.5_darwin-amd64.tar.gz"
+      sha256 "0840c21fc17cc84afdf250f705aeebc4965b253daad8a185abc9c5b83a850836"
 
       def install
         bin.install "litecart"
@@ -29,16 +29,16 @@ class Litecart < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.4/litecart_0.1.4_linux-arm64.tar.gz"
-      sha256 "8390a6786a1da19487ee29ce877741f90e2cf3ed686b840240f16d788fc21096"
+      url "https://github.com/shurco/litecart/releases/download/v0.1.5/litecart_0.1.5_linux-arm64.tar.gz"
+      sha256 "0fe162a74c67a5a14a590695834061078cf578c5418db169f0f838ede5d25197"
 
       def install
         bin.install "litecart"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.4/litecart_0.1.4_linux-amd64.tar.gz"
-      sha256 "76eba441901061f6e3ff3866e1f461d2f144f788c0fadfa72498c9b750835d78"
+      url "https://github.com/shurco/litecart/releases/download/v0.1.5/litecart_0.1.5_linux-amd64.tar.gz"
+      sha256 "5345151758f31e630671274bff463942e503f19be2f5c3cfbb3b8e45a3cc84c9"
 
       def install
         bin.install "litecart"
