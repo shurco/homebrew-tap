@@ -11,7 +11,7 @@ class Litecart < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_darwin-arm64.tar.gz"
-      sha256 "4122625d1410a044c7a934a9b90680322079e00164dd19dcc4a1cca80c6e9b43"
+      sha256 "07498d5710b5a965038eb6c98451c07865354bf0f8dcf6c67d4058a3be25c6c0"
 
       def install
         bin.install "litecart"
@@ -19,7 +19,7 @@ class Litecart < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_darwin-amd64.tar.gz"
-      sha256 "ce6f1ecb915fa1f5a9c76606ab2a1a57768307d875c1a873d5a4053e026606e0"
+      sha256 "3aef8c1c7f77f2e87de55b7ac002359c08e66dc38dc2fc30abb46215521f58f5"
 
       def install
         bin.install "litecart"
@@ -30,7 +30,7 @@ class Litecart < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_linux-arm64.tar.gz"
-      sha256 "4a713a88a8d8601aa743b4cf4a5cc442fd1fbd4e94337a0e9a52e4ac4ccc6386"
+      sha256 "9aec2165aafae82609e154a7e3cd9d23711ce4f0f45233abfc455a61dd0bd967"
 
       def install
         bin.install "litecart"
@@ -38,7 +38,7 @@ class Litecart < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_linux-amd64.tar.gz"
-      sha256 "d6cc6e899f53dbf9d729f20a574c05a854033f7d5b233bec2c6116b89f5d4230"
+      sha256 "2fa6eba63018866f0bbf62984d616b833f8c5b0dcf0fa824f0216aab05a749a7"
 
       def install
         bin.install "litecart"
