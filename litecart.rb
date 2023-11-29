@@ -5,21 +5,21 @@
 class Litecart < Formula
   desc "🛒 litecart - shopping-cart in 1 file"
   homepage "https://github.com/shurco/litecart"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_darwin-arm64.tar.gz"
-      sha256 "641825991a6e90c9d8ee53fafa44fda1119397677be271230b8efa7ca7e09d2b"
+      url "https://github.com/shurco/litecart/releases/download/v0.1.7/litecart_0.1.7_darwin-arm64.tar.gz"
+      sha256 "476e9e490e39aed02f87b9708357ba5168fc3fe19113459953868d315d02180c"
 
       def install
         bin.install "litecart"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_darwin-amd64.tar.gz"
-      sha256 "3e57a9ea6833e7de0516e0524281af64581d43382877b624bb48b144755f4d71"
+      url "https://github.com/shurco/litecart/releases/download/v0.1.7/litecart_0.1.7_darwin-amd64.tar.gz"
+      sha256 "5afe7f475c568a241ced48eb3d8222a7394044fe34bc064d41a40366a154474b"
 
       def install
         bin.install "litecart"
@@ -28,17 +28,17 @@ class Litecart < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_linux-arm64.tar.gz"
-      sha256 "1123ef813eb8bbdd368456ad8429d2cf2214c53459ee1f1bc83f3c474561dd81"
+    if Hardware::CPU.intel?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.7/litecart_0.1.7_linux-amd64.tar.gz"
+      sha256 "869a1f770975d671454f91a78836c24921058bbb0c09277b82584667318412ba"
 
       def install
         bin.install "litecart"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/shurco/litecart/releases/download/v0.1.6/litecart_0.1.6_linux-amd64.tar.gz"
-      sha256 "2547caea6c355d871ec829b57f6385aa6bbd161bd0ff7768c29dae436adaae98"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/shurco/litecart/releases/download/v0.1.7/litecart_0.1.7_linux-arm64.tar.gz"
+      sha256 "d7846df055776d16461cbfe6b7d9a66c31da403ce0c4737474975d33f117854f"
 
       def install
         bin.install "litecart"
